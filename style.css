@@ -120,3 +120,39 @@ a.baca-di-sini:hover {
     color: #e74c3c;
     transform: scale(1.1) rotate(-2deg);
 }
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 10px #e74c3c, 0 0 20px #e74c3c;
+    }
+    50% {
+        opacity: 0.8;
+        text-shadow: 0 0 5px #e74c3c, 0 0 10px #e74c3c;
+    }
+}
+
+.warning-blink {
+    animation: blink 1s infinite;
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 22px; /* Perbesar font untuk lebih menarik perhatian */
+    margin-top: 20px;
+    text-align: center;
+}
+
+.fixed-warning {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8d7da;
+    color: #721c24;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: blink 1s infinite;
+}
