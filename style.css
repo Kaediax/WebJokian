@@ -171,11 +171,11 @@ a.baca-di-sini:hover {
 @keyframes blink {
     0%, 100% {
         opacity: 1;
-        text-shadow: 0 0 10px #e74c3c, 0 0 20px #e74c3c;
+        text-shadow: 0 0 10px #3498db, 0 0 20px #3498db;
     }
     50% {
         opacity: 0.8;
-        text-shadow: 0 0 5px #e74c3c, 0 0 10px #e74c3c;
+        text-shadow: 0 0 5px #3498db, 0 0 10px #3498db;
     }
 }
 
@@ -188,17 +188,17 @@ a.baca-di-sini:hover {
 }
 
 @keyframes glow {
-    0%, 100% { box-shadow: 0 0 16px 4px #e74c3c55, 0 0 32px 8px #e74c3c22; }
-    50% { box-shadow: 0 0 32px 12px #e74c3c99, 0 0 48px 16px #e74c3c44; }
+    0%, 100% { box-shadow: 0 0 16px 4px #3498db55, 0 0 32px 8px #3498db22; }
+    50% { box-shadow: 0 0 32px 12px #3498db99, 0 0 48px 16px #3498db44; }
 }
 
 @keyframes smooth-pulse {
     0%, 100% {
-        box-shadow: 0 0 16px 4px #e74c3c55, 0 0 32px 8px #e74c3c22;
+        box-shadow: 0 0 16px 4px #3498db55, 0 0 32px 8px #3498db22;
         opacity: 1;
     }
     50% {
-        box-shadow: 0 0 32px 12px #e74c3c99, 0 0 48px 16px #e74c3c44;
+        box-shadow: 0 0 32px 12px #3498db99, 0 0 48px 16px #3498db44;
         opacity: 0.92;
     }
 }
@@ -211,7 +211,7 @@ a.baca-di-sini:hover {
 /* Animasi peringatan smooth */
 .warning-blink, .fixed-warning {
     animation: smooth-pulse 1.8s infinite cubic-bezier(.4,0,.2,1), float-updown 2.2s infinite ease-in-out;
-    color: #e74c3c;
+    color: #3498db;
     font-weight: bold;
     font-size: 22px;
     margin-top: 20px;
@@ -219,8 +219,8 @@ a.baca-di-sini:hover {
     background: rgba(30, 34, 45, 0.92);
     border-radius: 12px;
     padding: 12px 18px;
-    box-shadow: 0 2px 12px rgba(231, 76, 60, 0.18);
-    border: 1.5px solid #e74c3c;
+    box-shadow: 0 2px 12px rgba(52, 152, 219, 0.18);
+    border: 1.5px solid #3498db;
     display: inline-block;
 }
 
@@ -230,17 +230,17 @@ a.baca-di-sini:hover {
     left: 0;
     width: 100%;
     background: linear-gradient(90deg, #2c2f3a 80%, #232a34 100%);
-    color: #e74c3c;
+    color: #3498db;
     font-weight: bold;
     font-size: 18px;
     text-align: center;
     padding: 10px 0;
     z-index: 1000;
-    border-bottom: 2px solid #e74c3c;
+    border-bottom: 2px solid #3498db;
     border-radius: 0 0 16px 16px;
     backdrop-filter: blur(4px);
     letter-spacing: 1px;
-    box-shadow: 0 6px 24px rgba(231, 76, 60, 0.18);
+    box-shadow: 0 6px 24px rgba(52, 152, 219, 0.18);
 }
 
 section {

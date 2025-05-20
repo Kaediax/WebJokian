@@ -27,23 +27,24 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-fill-color: transparent;
             text-shadow:
-                0 2px 8px #232a34,
-                0 0 2px #fffbe6,
-                0 2px 0 #b8860b,
-                0 4px 12px #b8860b,
-                0 0 24px #fffbe6;
-            filter: drop-shadow(0 2px 0 #b8860b);
+                0 2px 8px #6ec6ff,
+                0 0 2px #e3f7ff,
+                0 2px 0 #6ec6ff,
+                0 4px 12px #6ec6ff,
+                0 0 24px #e3f7ff;
+            filter: drop-shadow(0 2px 0 #6ec6ff);
             margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
         ">
             Boost of Teyvat
         </h1>
         <p>Partner terpercaya Anda untuk berbagai game populer!</p>
         <div class="game-buttons">
-            <button onclick="location.href='genshin.html'">Genshin Impact</button>
-            <button onclick="location.href='zenless.html'">Zenless Zone Zero</button>
-            <button onclick="location.href='honkai.html'">Honkai Star Rail</button>
+            <button onclick="location.href='genshin.html'"><span>Genshin Impact</span></button>
+            <button onclick="location.href='zenless.html'"><span>Zenless Zone Zero</span></button>
+            <button onclick="location.href='honkai.html'"><span>Honkai Star Rail</span></button>
         </div>
         <p class="warning-blink">⚠️ Layanan joki untuk Honkai Star Rail dan Zenless Zone Zero belum berjalan. Nantikan informasi lebih lanjut! ⚠️</p>
     </section>
@@ -62,5 +63,98 @@
         <button onclick="location.href='page3.html'" style="margin-top: 20px; background-color: #e74c3c; color: white; border: none; padding: 10px 20px; font-size: 18px; cursor: pointer; border-radius: 5px;">Pembayaran</button>
     </section>
     <script src="script.js"></script>
+    <style>
+    .hero {
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+    }
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: url('https://imgur.com/FWFMTwL.jpg') center center/cover no-repeat;
+        opacity: 1;
+        border-radius: 24px;
+        pointer-events: none;
+    }
+    .hero > * {
+        position: relative;
+        z-index: 1;
+    }
+    /* Genshin Impact button background image layer */
+    .game-buttons button:first-child {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    .game-buttons button:first-child::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: url('https://i.imgur.com/W36juaR.png') center center/cover no-repeat;
+        opacity: 1;
+        pointer-events: none;
+        border-radius: 5px;
+    }
+    .game-buttons button:first-child span,
+    .game-buttons button:first-child {
+        position: relative;
+        z-index: 1;
+    }
+    /* Zenless Zone Zero button background image layer */
+    .game-buttons button:nth-child(2) {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    .game-buttons button:nth-child(2)::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: url('https://i.imgur.com/a5hI1Cr.jpeg') center center/cover no-repeat;
+        opacity: 1;
+        pointer-events: none;
+        border-radius: 5px;
+    }
+    .game-buttons button:nth-child(2) span,
+    .game-buttons button:nth-child(2) {
+        position: relative;
+        z-index: 1;
+    }
+    /* Honkai Star Rail button background image layer */
+    .game-buttons button:nth-child(3) {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    .game-buttons button:nth-child(3)::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: url('https://i.imgur.com/RGs8KEC.jpeg') center center/cover no-repeat;
+        opacity: 1;
+        pointer-events: none;
+        border-radius: 5px;
+    }
+    .game-buttons button:nth-child(3) span,
+    .game-buttons button:nth-child(3) {
+        position: relative;
+        z-index: 1;
+    }
+    /* Text shadow for all game buttons */
+    .game-buttons button span {
+        text-shadow:
+            0 2px 8px #232a34,
+            0 0 2px #fff,
+            0 2px 0 #232a34,
+            0 4px 12px #232a34,
+            0 0 24px #fff;
+    }
+    </style>
 </body>
 </html>
