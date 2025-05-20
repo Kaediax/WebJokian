@@ -36,10 +36,20 @@
     </section>
     <section style="text-align: center; padding: 20px;">
         <h2>Pilih Game Lain</h2>
-        <button onclick="location.href='genshin.html'" style="background-color: #3498db; color: white; border: none; padding: 10px 20px; font-size: 18px; cursor: pointer; border-radius: 5px; margin-right: 10px;">Genshin Impact</button>
-        <button onclick="location.href='zenless.html'" style="background-color: #9b59b6; color: white; border: none; padding: 10px 20px; font-size: 18px; cursor: pointer; border-radius: 5px; margin-right: 10px;">Zenless Zone Zero</button>
-        <button onclick="location.href='honkai.html'" style="background-color: #e74c3c; color: white; border: none; padding: 10px 20px; font-size: 18px; cursor: pointer; border-radius: 5px;">Honkai Star Rail</button>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
+            <button onclick="location.href='genshin.html'" style="background-color: #3498db; color: white; border: none; padding: 10px 20px; font-size: 18px; cursor: pointer; border-radius: 5px;">Genshin Impact</button>
+            <button onclick="location.href='zenless.html'" style="background-color: #9b59b6; color: white; border: none; padding: 10px 20px; font-size: 18px; cursor: pointer; border-radius: 5px;">Zenless Zone Zero</button>
+            <button onclick="location.href='honkai.html'" style="background-color: #e74c3c; color: white; border: none; padding: 10px 20px; font-size: 18px; cursor: pointer; border-radius: 5px;">Honkai Star Rail</button>
+        </div>
     </section>
     <script src="script.js"></script>
+    <style>
+    @media (max-width: 600px) {
+        section[style*="text-align: center; padding: 20px;"] div {
+            flex-direction: column !important;
+            gap: 14px !important;
+        }
+    }
+    </style>
 </body>
 </html>
