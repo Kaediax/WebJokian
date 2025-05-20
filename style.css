@@ -192,9 +192,25 @@ a.baca-di-sini:hover {
     50% { box-shadow: 0 0 32px 12px #e74c3c99, 0 0 48px 16px #e74c3c44; }
 }
 
-/* Animasi peringatan */
+@keyframes smooth-pulse {
+    0%, 100% {
+        box-shadow: 0 0 16px 4px #e74c3c55, 0 0 32px 8px #e74c3c22;
+        opacity: 1;
+    }
+    50% {
+        box-shadow: 0 0 32px 12px #e74c3c99, 0 0 48px 16px #e74c3c44;
+        opacity: 0.92;
+    }
+}
+
+@keyframes float-updown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Animasi peringatan smooth */
 .warning-blink, .fixed-warning {
-    animation: blink 1s infinite, shake 1.2s infinite, glow 2s infinite;
+    animation: smooth-pulse 1.8s infinite cubic-bezier(.4,0,.2,1), float-updown 2.2s infinite ease-in-out;
     color: #e74c3c;
     font-weight: bold;
     font-size: 22px;
